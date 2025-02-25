@@ -253,6 +253,23 @@ header .kangoo-logo-2{
     object-fit: cover;
 }
 
+.video-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+iframe {
+    width: 125%;
+    height: 125%;
+    position: absolute;
+    pointer-events: none;
+    left: -15rem;
+}
+
 @media (max-width: 1919px){
     .hl-video {
         width: 100%;
