@@ -49,7 +49,11 @@ span{
     font-weight: 500;
 }
 
-
+@media (max-width: 400px) {
+    html{
+        font-size: 80%;
+    }
+}
 
 
 
@@ -654,7 +658,7 @@ header .kangoo-logo-2{
     padding: 0 5rem 0 5rem;
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 4rem;
 }
 
 .instruktori-tabulka img{
@@ -665,7 +669,10 @@ header .kangoo-logo-2{
 
 .instruktori-tabulka .instruktor{
     text-align: center;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    max-width: 15rem;
+    justify-content: center;
 }
 
 .rada{
@@ -677,11 +684,6 @@ header .kangoo-logo-2{
     .instruktori-tabulka {
         padding: 0 2rem; /* Menší padding */
     }
-
-    .instruktori-tabulka img {
-        max-width: 12rem;
-        max-height: 24rem;
-    }
 }
 
 @media (max-width: 901px) {
@@ -689,32 +691,6 @@ header .kangoo-logo-2{
         flex-wrap: wrap;
         justify-content: center; /* Zarovnání na střed */
         gap: 2rem;
-    }
-
-    .instruktor {
-        width: 45%; /* Každý instruktor zabere 45 % šířky */
-    }
-
-    .instruktori-tabulka img {
-        max-width: 10rem;
-        max-height: 20rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .instruktor {
-        width: 100%; /* Na malých displejích jdou instruktoři pod sebe */
-    }
-
-    .instruktori-tabulka img {
-        max-width: 8rem;
-        max-height: 16rem;
-    }
-}
-
-@media (max-width: 400px) {
-    html{
-        font-size: 80%;
     }
 }
 
