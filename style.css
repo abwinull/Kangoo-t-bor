@@ -12,6 +12,8 @@
 }
 
 body{
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
     background-color: black;
     color: white;
@@ -23,6 +25,7 @@ body{
 section{
     height: max-content;
     scroll-margin-top: 5rem; /* Přizpůsob výšce svého headeru */
+    background-color: black;
 }
 
 h1{
@@ -85,6 +88,7 @@ nav {
     justify-content: center;
     display: flex;
     z-index: 1001;
+    
 }
 
 nav a {
@@ -157,7 +161,7 @@ header .kangoo-logo-2{
 @media (max-width: 1443px) {
     header {
         justify-content: start;
-        padding: 4rem;
+        padding: 2rem;
     }
 
     nav {
@@ -169,14 +173,17 @@ header .kangoo-logo-2{
         background-color: rgba(20, 20, 20, 0.85);
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         display: none; /* Skryto defaultně */
-        margin-top: 3rem;
+        padding-top: 4.5rem;
     }
 
     nav a {
-        margin: 1rem 0;
+        color: white;
         font-size: 1.5rem;
+        font-weight: 500;
+        transition: 0.3s ease-in-out;
+        display: inline-block;
+        position: relative;
     }
 
     .hamburger {
@@ -202,7 +209,7 @@ header .kangoo-logo-2{
     }
 
     header .kangoo-logo-2 {
-        max-width: 20rem;
+        max-width: 15rem;
         margin: 0 1rem;
         display: block;
     }
@@ -243,6 +250,7 @@ header .kangoo-logo-2{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background: transparent;
 }
 
 .hl-video{
@@ -254,29 +262,23 @@ header .kangoo-logo-2{
 }
 
 .video-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 1920px;      /* Pevná šířka */
+    height: 1080px;     /* Pevná výška */
+    transform: translate(-50%, -50%);
+    overflow: hidden;
     z-index: -1;
+  }
+  
+  .video-container iframe {
+    width: 1920px;
+    height: 1080px;
+    pointer-events: none;
+    border: 0;
     object-fit: cover;
-    pointer-events: none;
-}
-
-iframe {
-    width: 125%;
-    height: 125%;
-    position: absolute;
-    pointer-events: none;
-    left: -15rem;
-}
-
-@media (max-width: 1919px){
-    .hl-video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
+  }
 
 
 
