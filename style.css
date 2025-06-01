@@ -76,10 +76,14 @@ header {
     z-index: 1000;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
     justify-content: center;
     display: flex;
     align-items: center;
+}
+
+.navigace.hidden {
+    display: none;
 }
 
 header.visible {
@@ -106,6 +110,12 @@ nav a {
     position: relative;
 }
 
+nav img.kangoo-logo{
+    max-width: 15rem;
+    margin: 0 3rem;
+    
+}
+
 nav a:hover {
     transform: scale(1.2);
     text-shadow: 0 0 10px rgb(255, 0, 150);
@@ -127,11 +137,6 @@ nav a::after {
 nav a:hover::after {
     width: 100%;
     left: 0;
-}
-
-.kangoo-logo {
-    max-width: 15rem;
-    margin: 0 3rem;
 }
 
 header #menu-toggle {
@@ -245,6 +250,7 @@ header .kangoo-logo-2{
     text-shadow: 0 0 7px;
     margin-bottom: 1rem;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .domovska-stranka{
@@ -445,6 +451,15 @@ header .kangoo-logo-2{
 
 .predchozi-tabory{
     padding: 0 5rem 0 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media(max-width:486px){
+    .predchozi-tabory{
+        padding: 0 2rem 0 2rem;
+    }
 }
 
 .nadpis-tabor{
